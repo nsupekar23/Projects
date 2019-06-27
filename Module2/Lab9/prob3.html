@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+	<head>
+			<title>Form Validation</title>
+			<link href="style.css" rel="stylesheet"/>
+			<script src="validation.js" language="JavaScript">	
+				
+			</script>
+</head>
+	<body>
+	<h1>Enter your registration details:</h1>
+		<form name="registerform" onSubmit="validateAllData();">
+			<table border="1" align="center">
+				<tr>
+					<th>Name:</th>
+					<td><input type="text" name="fname" pattern="[A-z][a-z]+" placeholder="Name" value="" required/></td>
+				<br/></tr>
+				<tr>
+					<th>Date of Birth:</th>
+					<td><input type="text" name="DOB"  value="" required pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[012])/\d{4}" placeholder="dd-mm-yy"/></td>				
+				</tr>
+				<tr>
+					<th>Phone:</th>
+					<td><input type="text" name="phone"  value="" required pattern="(^[789][0-9]{9}$)" placeholder="987-6543-210"/></td>		
+				</tr>
+				<tr>
+					<th>Email:</th>
+					<td><input type="email" name="email"  value="" placeholder="abc@gmail.com" required /></td>
+				</tr>				
+					<tr>
+					<td>Graduation Level</td>
+					<td>UG:
+					<input type="radio" name="graduation"  value="UG"  id="ug"  onChange="validate1();" required/>
+							PG:
+					<input type="radio" name="graduation"  value="PG" id="pg"   onChange="validate2();"required/></td>
+				</tr>
+				<tr>
+				<td>Qualification:</td>
+					<td><select name="qualifi"  id="graduatn">
+							<option>Select qualification</option>
+							</select></td>
+							</tr>
+				<tr>
+					<td ><input type="submit" name="btnregi"  value="REGISTER" ></td>
+					<td><input type="button" name="btnprev"  value="PREVIEW"  onClick="details();"></td>
+				</tr>				
+		</table.
+	</form>
+  </body>
+</html>

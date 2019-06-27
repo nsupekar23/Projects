@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script language= "JavaScript">
+function ValidateAll()
+{
+var width = window.document.practicedemo.width.value;
+var height =window.document.practicedemo.height.value;
+var left = window.document.practicedemo.left.value;
+var top = window.document.practicedemo.left.value;
+
+ var myWinObj=window.
+ open("","CgWindow","left="+left+",top="+top+",width="+width+",height="+height);
+  myWinObj.document.write("<body bgcolor='blue'>");
+  myWinObj.document.write("<h5>Welcome To new window</h5>");
+  }
+  </script>
+</head>
+<body>
+<form name="practicedemo" >
+<table border="1" cellspacing="8" cellpadding="10" bordercolor="blue" >
+<tr><td colspan="8" align="center"><b>Create a new window</b>
+<tr><td colspan="8" align="center">Window Size
+<tr><td> Width<td><input type= "text" name="width" value="">
+<td> Height<td><input type= "text" name="height">
+<tr><td colspan="8" align="center"><b>Position</b>
+<tr><td> Left<td><input type= "text" name="left">
+<td> Top<td><input type= "text" name="top" ></tr>
+<tr>
+<td></td>
+ <td> <input type= "submit" value ="New Window" onClick="ValidateAll();"></td>
+ <td></td>
+<td><input type="Reset"></td></tr>
+</table>
+</form>
+
+</body>
+</html>
